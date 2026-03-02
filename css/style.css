@@ -1310,7 +1310,9 @@ body{
 }
 
 
-
+.wave-footer::before {
+  background: var(--color-main);
+}
 
 /* FOOTER SECTION */
 
@@ -1319,6 +1321,7 @@ body{
     background-color: var(--color-main);
     color: var(--color-text-button); 
     padding: 80px 0 50px 0;
+    position: relative;
 }
 
 
