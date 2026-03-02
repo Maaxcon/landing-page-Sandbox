@@ -163,7 +163,6 @@ body{
     align-items: center; 
     justify-content: space-between;
     min-height: 85px; 
-    position: relative;
 }
 
 
@@ -291,6 +290,7 @@ body{
     .burger-menu {
         display: flex;
     }
+
 
  
     .header__nav {
