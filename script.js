@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         htmlElement.setAttribute('data-theme', 'dark');
-        img.src = "sun.svg";
+        img.src = "assets/images/theme/sun.svg";
     } else {
-        img.src = "moon.svg";
+        img.src = "assets/images/theme/moon.svg";
     }
 
 
