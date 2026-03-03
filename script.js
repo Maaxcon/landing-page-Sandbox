@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentTheme === 'dark') {
                 htmlElement.removeAttribute('data-theme'); 
                 localStorage.setItem('theme', 'light');    
-                img.src = "moon.svg";                 
+                img.src = "assets/images/theme/moon.svg";                 
             } else {
                 htmlElement.setAttribute('data-theme', 'dark'); 
                 localStorage.setItem('theme', 'dark');          
-                img.src = "sun.svg";                       
+                img.src = "assets/images/theme/sun.svg";                       
             }
         });
 });
