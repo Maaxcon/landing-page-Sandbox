@@ -11,11 +11,14 @@
 <body>
     
     <header class="header">
+        <button class="back_to_top">
+                ↑
+        </button>
         <div class="header__block containers">
             <a class="header__logo-link" href="index.html">
                  <img class="header__img" src="assets/images/logo.svg" alt="Logo Company" height="26px" width="134px">
             </a>
-
+                
             
 
             <!-- Burger menu. Start:display:none -->
@@ -29,24 +32,25 @@
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <button type="button" class="header__nav-toggle">Demos</button>
+                        <button type="button" class="header__nav-toggle">Company</button>
                         <ul class="header__dropdown-menu">
-                            <li><a class="header__dropdown-item" href="#">First</a></li>
-                            <li><a class="header__dropdown-item" href="#">Second</a></li>
+                            <li><a class="header__dropdown-item" href="#services">What We Do</a></li>
+                            <li><a class="header__dropdown-item" href="#strategy">Our Strategy</a></li>
+                            <li><a class="header__dropdown-item" href="#solution">Why Choose Us</a></li>
                         </ul>
                     </li>
                     <li class="header__nav-item">
-                        <button type="button" class="header__nav-toggle">Pages</button>
+                        <button type="button" class="header__nav-toggle">Portfolio</button>
                         <ul class="header__dropdown-menu">
-                            <li><a class="header__dropdown-item" href="#">First</a></li>
-                            <li><a class="header__dropdown-item" href="#">Second</a></li>
+                            <li><a class="header__dropdown-item" href="#projects">Latest Projects</a></li>
+                            <li><a class="header__dropdown-item" href="#customers">Testimonials</a></li>
                         </ul>
                     </li>
                     <li class="header__nav-item">
-                        <button type="button" class="header__nav-toggle">Projects</button>
+                        <button type="button" class="header__nav-toggle">About</button>
                         <ul class="header__dropdown-menu">
-                            <li><a class="header__dropdown-item" href="#">First</a></li>
-                            <li><a class="header__dropdown-item" href="#">Second</a></li>
+                            <li><a class="header__dropdown-item" href="#team">Our Team</a></li>
+                            <li><a class="header__dropdown-item" href="#faq">FAQ</a></li>
                         </ul>
                     </li>
                     <li class="header__nav-item">
@@ -72,7 +76,7 @@
                     </li>
                 </ul>
                 <div class="header__block-btn">
-                    <a href="#" class="header__button btn">Contact</a>
+                    <a href="#" class="header__button btn js-open-modal">Contact</a>
                 </div>
                 <button class="header__block-mode" id="themeToggle" aria-label="Перемкнути тему">
                     <img class="header__mode-img" src="assets/images/theme/moon.svg" alt="theme icon" width="34" height="34">
@@ -108,7 +112,7 @@
 
         <!-- SECOND SECTION -->
 
-        <section class="offer wave-before ">
+        <section class="offer wave-before" id="services">
             <div class="offer__section containers">
                     <span class="offer__over-title blue-text">What We Do?</span>
                     <h2 class="offer__title">The service we offer is specifically designed to meet your needs.</h2>
@@ -142,7 +146,7 @@
 
         <!-- THIRD SECTION -->
 
-        <section class="strategy containers">
+        <section class="strategy containers" id="strategy">
             <div class="strategy__container">
                 
                 <div class="strategy__content">
@@ -185,7 +189,7 @@
 
         <!--FOURTH SECTION -->
 
-        <section class="solution">
+        <section class="solution" id="solution">
             <div class="solution__container containers wave-after">
 
                 <div class="solution__block-img">
@@ -196,7 +200,7 @@
                     <p class="solution__over-title blue-text">Why Choose Us?</p>
                     <h2 class="solution__title">We bring solutions to <br> make life easier.</h2>
 
-                    <details class="ui-accordion solution__accordion">
+                    <details class="ui-accordion solution__accordion" name="ui-accordion">
                         <summary class="ui-accordion__header">
                             <span class="ui-accordion__title">Professional Design</span>
                         </summary>
@@ -205,7 +209,7 @@
                         </div>
                     </details>
 
-                    <details class="ui-accordion solution__accordion">
+                    <details class="ui-accordion solution__accordion" name="ui-accordion">
                         <summary class="ui-accordion__header">
                             <span class="ui-accordion__title">Top-Notch Support</span>
                         </summary>
@@ -214,7 +218,7 @@
                         </div>
                     </details>
 
-                    <details class="ui-accordion solution__accordion">
+                    <details class="ui-accordion solution__accordion" name="ui-accordion">
                         <summary class="ui-accordion__header">
                             <span class="ui-accordion__title">Header and Slider Options</span>
                         </summary>
@@ -229,7 +233,7 @@
 
         <!-- TEAM SECTION -->
 
-       <section class="team containers">
+       <section class="team containers" id="team">
     
             <div class="team__top-row">
             
@@ -319,7 +323,7 @@
         </div>
     </section>
 
-        <section class="projects containers">
+        <section class="projects containers" id="projects">
             <div class="projects__container">
                 
                 <div class="projects__header">
@@ -387,7 +391,7 @@
 
         
 
-    <section class="customers wave-before">
+    <section class="customers wave-before" id="customers">
         <div class="customers__container containers">
         
             <div class="customers__header">
@@ -481,7 +485,7 @@
 
 <!-- FAQ SECTION -->
 
-<section class="faq containers">
+<section class="faq containers" id="faq">
     <div class="faq__container">
 
         <div class="faq__content">
@@ -596,8 +600,8 @@
             <div class="footer__col">
                 <h4 class="footer__title">Our Newsletter</h4>
                 <p class="footer__text">Subscribe to our newsletter to get our news & deals delivered to you.</p>
-                <form class="footer__form" action="#">
-                    <input type="email" class="footer__input" placeholder="Email Address" required>
+                <form class="footer__form" action="#" novalidate>
+                    <input type="email" class="footer__input" placeholder="Email Address" >
                     <button type="submit" class="footer__submit btn">Join</button>
                 </form>
             </div>
@@ -606,7 +610,31 @@
     </div>
 </footer>
 
+    <button class="back_to_top">↑</button>
 
+<div class="modal-overlay" id="contactModal">
+    <div class="modal-window">
+        <button class="modal-close" aria-label="Закрити модальне вікно">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <h3 class="modal-title">Get in Touch</h3>
+        <p class="modal-desc">We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form class="modal-form" action="#">
+            <input type="text" class="modal-input" placeholder="Your Name" required>
+            <input type="email" class="modal-input" placeholder="Your Email" required>
+            <textarea class="modal-textarea" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="modal-submit btn">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
