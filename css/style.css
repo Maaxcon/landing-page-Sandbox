@@ -940,7 +940,7 @@ body {
 .card__role {
     display: block;
     font-size: var(--fs-14);
-    color: #aab0bc;
+    color: var(--color-text-describe);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -1095,7 +1095,7 @@ body {
 .project__btn--next,
 .project__btn--prev {
     background-color: var(--color-button);
-    color: #ffffff;
+    color: var(--color-text-button)
 }
 
 .project__btn--next:hover,
@@ -1407,7 +1407,7 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px 0 0 8px;
-    color: #ffffff;
+    color: var(--color-text-button);
     font-size: var(--fs-15);
     transition: border-color 0.3s ease;
 }
@@ -1475,7 +1475,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--color-button);
-    color: #ffffff;
+    color: var(--color-text-button);
     font-size: 24px; 
     cursor: pointer;
     box-shadow: var(--shadow-card);
@@ -1588,7 +1588,7 @@ body {
     gap: 15px;
 }
 .modal-input, .modal-textarea {
-    width: 100%;
+    max-width: 100%;
     padding: 15px 20px;
     background-color: transparent;
     border: 1px solid rgba(128, 128, 128, 0.3);
@@ -1604,6 +1604,9 @@ body {
     outline: none;
     border-color: var(--color-button);
 }
+
+
+
 .modal-submit {
     margin-top: 10px;
     width: 100%;

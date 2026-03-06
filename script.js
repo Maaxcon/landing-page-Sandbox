@@ -84,7 +84,6 @@ function initAccordion() {
 
     items.forEach(item => {
         item.addEventListener('click', (event) => {
-            
             if (event.target.closest('.header__dropdown-menu')) {
                 return; 
             }
@@ -174,6 +173,7 @@ function initModal() {
 
   
     modal.addEventListener('click', (e) => {
+        console.log(e.target);
         if (e.target === modal) {
             modal.classList.remove('is-open');
             body.classList.remove('no-scroll');
@@ -187,6 +187,9 @@ function initModal() {
         }
     });
 }
+
+const parentElement = document.createElement('div');
+console.log(parentElement);
 
 // VALIDATION FORM
 
@@ -246,11 +249,9 @@ function initSlider() {
   const slider = document.querySelector('.project__slider');
   const prevBtn = document.querySelector('.project__btn--prev');
   const nextBtn = document.querySelector('.project__btn--next');
-
+  const itemWidth = slider.querySelector('.project__slider-item').offsetWidth + 30;
 
   function nextSlide() {
-    const itemWidth = slider.querySelector('.project__slider-item').offsetWidth + 30;
-    
     if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
         slider.scrollTo({ left: 0, behavior: 'smooth' });
     } else {
@@ -259,8 +260,6 @@ function initSlider() {
   }
 
   function prevSlide() {
-    const itemWidth = slider.querySelector('.project__slider-item').offsetWidth + 30;
-    
     if (slider.scrollLeft <= 0) {
         slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
     } else {
@@ -270,7 +269,6 @@ function initSlider() {
 
   prevBtn.addEventListener('click', prevSlide);
   nextBtn.addEventListener('click', nextSlide);
-
 
   setInterval(nextSlide, 5000);
 }
