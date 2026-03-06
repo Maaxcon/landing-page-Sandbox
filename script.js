@@ -174,8 +174,6 @@ function initModal() {
     });
 }
 
-const parentElement = document.createElement('div');
-console.log(parentElement);
 
 // VALIDATION FORM
 
